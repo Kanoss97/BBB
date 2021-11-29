@@ -1,5 +1,5 @@
 
-gg.toast('FuckChina Loaded')
+gg.toast('Việt Hóa Bởi Kanoss')
 ddd = 211128
 pshare = ''
 umenu = true
@@ -8,7 +8,7 @@ fastvalue = false
 fastitem = false
 echanged = false
 teleping = false
-message = '⚠️Use at educational and personal only⚠️\nYour own risk'
+message = 'Việt Hóa Bởi Kanoss'
 fastmax = 0
 stojump = false
 crset = {enable = false, level = 0, map = ''}
@@ -40,7 +40,6 @@ psettings = {
   ufps = 30
   }
   
-changelog = 'Last update\n\n-Script no longer exist in December\nDownload offline version in my telegram\nThanks'
 scriptv = {process ='com.tgc.sky.android',version=179644}
 teleparr = {spec = false,follow = false,collect = false,enable = false,hide = false,arr = 1}
 gameinfo = gg.getTargetInfo()
@@ -4033,7 +4032,7 @@ function domenu()
       if m == 10 then 
         x=gg.choice({
            'Auto wing farm'
-           ,'⚠️Auto candle farm⚠️'
+           ,'⚠️Tự động farm nến⚠️'
            ,'Semi-Auto candle farm'
            ,'Semi-Auto wing farm'
            ,'Semi-Auto spirit farm'
@@ -4051,7 +4050,7 @@ function domenu()
            ,'Desert'
            ,'Library'
            ,'Eden'
-         },nil,'This will cannot be stopped!')
+         },nil,'Không thể dừng lại!')
           if y == 1 then
             wingfarm(2,47)
           end
