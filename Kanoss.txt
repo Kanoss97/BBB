@@ -1,4 +1,3 @@
-
 gg.toast('Việt Hóa Bởi Kanoss')
 ddd = 211128
 pshare = ''
