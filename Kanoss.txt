@@ -3184,24 +3184,24 @@ end
 
 function scsettings()
   xcs = gg.choice({
-    'Auto CR speed hack : ' .. psettings.crspeed,
-    'Auto CR delay : ' .. psettings.crdelay .. 'ms',
-    'Auto CR after delay : ' .. psettings.crabsorb .. 'ms',
-    'Auto WR delay : ' .. psettings.wrdelay .. 'ms',
+    'Hack tốc độ farm nến : ' .. psettings.crspeed,
+    'Độ trễ của tự động farm nến : ' .. psettings.crdelay .. 'ms',
+    'Tự động farm nến sau độ trễ : ' .. psettings.crabsorb .. 'ms',
+    'Độ trễ của tự động farm cánh : ' .. psettings.wrdelay .. 'ms',
     'Breach wall distance : ' .. psettings.warpdis,
-    'No damage wings : ' .. boolling(psettings.nodamage),
-    'Fast return home : ' .. boolling(psettings.fasthome),
-    'Use gg speedhack : ' .. boolling(psettings.ggspeed),
-    'SpeedHack when change map : ' .. boolling(psettings.portalspeed),
-    'Auto show up script menu : ' .. boolling(psettings.showmenu),
-    'Semi-auto candle runner delay : ' .. psettings.smcrdelay .. 'ms',
-    'Semi-auto wing runner delay : ' .. psettings.smwrdelay .. 'ms',
-    'Use legacy map changer : ' .. boolling(psettings.portaldef),
-    'Fasthome speed : ' .. psettings.fhspeed,
-    'Change map image : ' .. imgs[psettings.cmimage],
+    'Không gây hại cho cánh : ' .. boolling(psettings.nodamage),
+    'Về home nhanh : ' .. boolling(psettings.fasthome),
+    'Sử dụng gg hack tốc độ : ' .. boolling(psettings.ggspeed),
+    'Hack tốc độ khi thay đổi map : ' .. boolling(psettings.portalspeed),
+    'Tự động hiện lên script menu : ' .. boolling(psettings.showmenu),
+    'Tốc độ chạy của Semi-auto farm nến : ' .. psettings.smcrdelay .. 'ms',
+    'Tốc độ chạy của Semi-auto nhặt cánh : ' .. psettings.smwrdelay .. 'ms',
+    'Sử dụng trình thay đổi bản đồ cũ : ' .. boolling(psettings.portaldef),
+    'Tốc độ về nhà : ' .. psettings.fhspeed,
+    'Thay đổi hình ảnh map : ' .. imgs[psettings.cmimage],
     'Android 11(Testing) : ' .. boolling(psettings.aeleven),
     'Fps : ' .. psettings.ufps,
-    '👋 Exit script'
+    'Thoát'
   },nil,'')
   if xcs == nil then return; end
   if xcs == 1 then
@@ -3272,20 +3272,20 @@ gg.setVisible(false)
 gg.showUiButton()
 
 function domenu()
-      m=gg.choice({'🎈Wings'
-      	,'🕯Collect Candles'
-      	,'⬆️Breach wall'
+      m=gg.choice({'🎈Mod Cánh'
+      	,'🕯Nhặt nến'
+      	,'⬆️Xuyên tường'
       	,'🌏World'
       	,'☸Engine settings'
       	,'♿Troll'
       	,'💫Magic'
       	,'🎭Emotes'
-      	,'🏧Set props'
-        ,'🔄Auto run'
+      	,'🏧Chỉnh đạo cụ'
+        ,'🔄Tự động chạy'
         ,'📽camera'
-        ,'🚻Players'
-        ,'🆖️Interface'
-        ,'📝Script settings'
+        ,'🚻Người chơi'
+        ,'🆖️Giao diện'
+        ,'📝Cài đặt script'
         ,'⚠️Testing features'
       },nil,message)
     message = ''
@@ -3293,13 +3293,13 @@ function domenu()
         nn = 0
         nn = getadd(pbase,gg.TYPE_DWORD)
         x=gg.choice({
-        'Fill'
-        ,'Set wing counts'
-        ,'Lock wing energy'
-      	,'Throw wings'
-      	,'⚠️Explode wings'
-      	,'No losing wings'
-      	,'Invisible wing'
+        'Lấp đầy'
+        ,'Đặt số lượng cánh'
+        ,'Khóa năng lượng cánh'
+      	,'Ném cánh'
+      	,'⚠️Nổ cánh'
+      	,'Không mất cánh'
+      	,'Cánh vô hình'
       	,'Office wing'
       	,'Nintendo red'
       	,'Nintendo blue'
@@ -3361,23 +3361,23 @@ function domenu()
       end
       if m == 4 then 
         x=gg.choice({
-        '➡️Teleport'
-      	,'⏩Change map'
-      	,'🤝Change map together'
-      	,'🏠Change home code'
-      	,'⬇️Save this location'
+        '➡️Dịch chuyển'
+      	,'⏩Thay đổi map'
+      	,'🤝Thay đổi bản đồ cùng nhau'
+      	,'🏠Thay đổi mã home'
+      	,'⬇️Lưu địa điểm này'
       	,'⬆️Load saved location' .. math.floor(px) .. ', ' .. math.floor(py) .. ', ' ..math.floor(pz)
-      	,'🪄Modify coord'
-      	,'🔔Show all candles'
-      	,'🔕Hide all candles'
+      	,'🪄Mod tọa độ'
+      	,'🔔Hiện tất cả nến'
+      	,'🔕Ẩn tất cả nến'
       	,'⚠️Noclip'
-      	,'☁️Show/Hide clouds'
+      	,'☁️Ẩn/hiện mây'
       	,'⏫Warp up'
       	,'⏬Warp down'
-      	,'🦀Crabs'
-      	,'🦐Krills'
-      	,'🚪Remove map changes/limits'
-      	,'🔍Find door'
+      	,'🦀Cua'
+      	,'🦐Tôm'
+      	,'🚪Xóa thay đổi map/giới hạn'
+      	,'🔍Tìm cửa'
       	,'Set Warp distance'
       	,'Set breaching hotkey'
       	},nil,getmap())
@@ -3413,7 +3413,7 @@ function domenu()
           table.insert(y,cworld[i][1])
         end
         table.insert(y,'⚠️Crash game')
-         r=gg.choice(y,nil,'Select map and use your wing! ')
+         r=gg.choice(y,nil,'Chọn map và sử dụng cánh của bạn! ')
          if (r ~= nil) then 
            gg.setVisible(false)
            if psettings.fhspeed > 1 and fasthome and not teleping then
@@ -3582,25 +3582,25 @@ function domenu()
       if m == 5 then
         
          x=gg.choice({
-           '🔄Wing fast Recharge',
-           '⏫Wing force',
-           '➡️Jet fly mode',
-           '⏩Ground acceleration',
-           '⏭Engine speed',
-           '↗️Jump acceleration', 
-           '⤴️Jump distance',
-           '🔼Gravity',
-           '🏂Slide mode',
+           '🔄Cánh hồi nhanh',
+           '⏫Lực cánh',
+           '➡️Chế độ jet fly',
+           '⏩Tăng tốc mặt đất',
+           '⏭Hack tốc độ',
+           '↗️Tăng tốc nhảy', 
+           '⤴️Khoảng cách nhảy',
+           '🔼Trọng lực',
+           '🏂Chế độ trượt',
            '📳FPS',
-           '🚸Body size(Client)',
-           '🚹No knockdown',
-           '🔥Auto burn',
-           '🌬Remove wind wall',
-           '🏠Fast home/candles',
-           '🔦Light multiply',
-           '🏜World bright',
+           '🚸Kích cỡ thân hình(Chỉ bản thân thấy)',
+           '🚹Không bị hạ gục',
+           '🔥Tự động cháy',
+           '🌬Loại bỏ bức tường gió',
+           '🏠Về nhà nhanh\nến',
+           '🔦Ánh sáng nhân lên',
+           '🏜Làm sáng map',
            '🏃Honk to jump',
-           '📥No item cool down',
+           '📥Hồi tức thì thời gian item',
            '🦿No movement block'
          },nil,'')
           if x == 1 then 
